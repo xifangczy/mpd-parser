@@ -15,7 +15,7 @@ const mergeDiscontiguousPlaylists = playlists => {
     // assuming playlist IDs are the same across periods
     // TODO: handle multiperiod where representation sets are not the same
     // across periods
-    const name = playlist.attributes.id + (playlist.attributes.lang || '');
+    const name = playlist.attributes.id + (playlist.attributes.lang || '') + (playlist.attributes.label || '');
 
     if (!acc[name]) {
       // First Period
